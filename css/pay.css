@@ -1,0 +1,748 @@
+body{
+	background: url(../image/body_bg.png);
+	font-family: "play",sans-serif;
+	letter-spacing: 0.2px;
+}
+@font-face {
+	font-family: "play";
+	src : url("../font chu/play/Play-Bold.ttf");
+}
+.container{
+	max-width: 1140px;
+}
+.col,.col-sm-8,.col-sm-4{
+	padding-left: 0;
+	padding-right: 0;
+}
+.user-rate .box{
+	width: 55px;
+	height: 11px;
+	background: url(../image/rate-bg.png) 0 0 repeat-X;
+	position: relative;
+}
+.user-rate .box .rating{
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: url(../image/rate-bg.png) 0 100% repeat-X;
+
+}
+/* Begin header */
+header .container .header{
+margin-bottom: 20px;
+} /* logo */
+
+header .container .menu-controll nav{
+	background: #3d3d3d;
+	border-radius: 6px 6px 0 0;
+	padding: 0;
+	user-select: none;
+	box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+
+}
+ header .container .menu-controll nav.navbar button{
+     position: relative;
+ }   
+  header .container .menu-controll nav.navbar button div{
+     position: absolute;
+     top: 50%;
+     left: 65px;
+     transform: translateY(-50%);
+     width: 200px;
+     text-align: left;
+     text-transform: uppercase;
+ }
+header .container .menu-controll nav > a{
+	display: none;
+}
+header .container .menu-controll nav .collapse ul{
+	margin-right: 0 !important;
+	width: 100%;
+}
+header .container .menu-controll nav .collapse ul li{
+	padding: 10px 20px;
+	position: relative;
+}
+header .container .menu-controll nav .collapse ul li:not(:first-child){
+	border-left: 1px solid #474747;
+}
+header .container .menu-controll nav .collapse ul li:before{
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 0;
+	background: #34AC35;
+	top: 0;
+	left: 0;
+	border-radius: 6px 6px 0 0;
+	transition: 0.35s;
+}
+header .container .menu-controll nav .collapse ul li:hover:before{
+	height: 100%;
+}
+header .container .menu-controll nav .collapse ul li.down ul li:hover:before{
+	height: 100%;
+}
+header .container .menu-controll nav .collapse ul li a{
+	font-size: 11.8px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #efefef !important;
+	position: relative;
+	text-decoration: none;
+}
+header .container .menu-controll nav .collapse ul li.down{
+	position: relative;
+	line-height: 34px;
+	font-size: 12px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #efefef ;
+	padding-right: 35px;
+	cursor: pointer;
+}
+header .container .menu-controll nav .collapse ul li.down span{
+	z-index: 3;
+	position: relative;
+	display: inline-block;
+}
+header .container .menu-controll nav .collapse ul li.down  i{
+	font-size: 14px;
+	position: absolute;
+	top: 20%;
+	right: 0;
+	transform: translate(20px,0%);
+}
+header .container .menu-controll nav .collapse ul li.down ul{
+	padding: 0;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	height: auto;
+	z-index: 999;
+	background: #ccc;
+	width: auto;
+}
+header .container .menu-controll nav .collapse ul li.down ul li{
+	background: #3D3D3D;
+	list-style: none;
+	border: none;
+	position: relative;
+	z-index: 2;
+	cursor: pointer;
+	text-decoration: none;
+	width: 200px;
+	height: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+	transition: 0.25s;
+	padding-left: 28px !important;
+}
+header .container .menu-controll nav .collapse ul li.down ul li:last-child{
+	min-width: 200px !important;
+}
+header .container .menu-controll nav .collapse ul li.down ul li a{
+	display: none;
+}
+header .container .menu-controll nav .collapse ul li.down ul li:before{
+	border-radius: 0;
+}	
+
+header .container .menu-controll nav .collapse ul li:last-child{
+	padding-right: 13px;
+	padding-left: 13px;
+	min-width: 283px;
+}
+header .container .menu-controll nav .collapse ul li:last-child:hover:before{
+	height: 0;
+}
+header .container .menu-controll nav .collapse ul li:last-child .form{
+	position: relative;
+	width: 100%;
+	height: 34px;
+}
+header .container .menu-controll nav .collapse ul li:last-child .form ul{
+	list-style: none;
+	width: 100%;
+	z-index: 99999;
+	padding: 0;
+	position: absolute;
+	top: 100%;
+	height: 100px;
+	overflow: auto;
+}
+header .container .menu-controll nav .collapse ul li:last-child .form ul li{
+	border: none;
+	font-size: 11px;
+	height: 20px;
+	line-height: 12px;
+	margin: 0;
+	padding: 3px;
+	overflow: hidden;
+	width: 100%;
+	background: #3d3d3d;
+	color: #fff;
+	cursor: pointer;
+	margin-top: 5px;
+	border: 1px solid #85d564;
+	border-radius: 20px;
+	display: none;
+}
+header .container .menu-controll nav .collapse ul li:last-child .form ul li:before{
+	height: 0;
+}
+header .container .menu-controll nav .collapse ul li:last-child .form .report{
+	width: 180px;
+	padding: 10px 20px;
+	position: absolute;
+	bottom: 150%;
+	right: -10px;
+	background: #bbb;
+	border-radius: 20px;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 13px;
+	display: none;
+}
+header .container .menu-controll nav .collapse ul li:last-child .form .report:after{
+		content: "";
+	width: 0;
+	height: 0;
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	transform: translateX(-50%);
+	border-top: 10px solid #ccc;
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+}
+header .container .menu-controll nav .collapse ul li:last-child .form a{
+	width: 36px;
+	height: 34px;
+	display: inline-block;
+	border-radius: 100% 100% 0;
+	background: #85d564;
+	font-size: 13px;
+	line-height: 34px;
+	text-align: center;
+	position: absolute;
+	right: 0;
+	top: 0; 
+}
+header .container .menu-controll nav .collapse ul li:last-child .form input{
+	width: 100%;
+	height: 100%;
+	display: block;
+	border: 1.5px solid  #85d564;
+	border-radius: 34px;
+	background: #3d3d3d;
+	color: #fdfdfd;
+	padding-left: 5px;
+	box-sizing: border-box;	
+}
+
+header .container .menu-controll nav .collapse ul li:last-child .form ::-webkit-input-placeholder{
+	font-size: 13px;
+	font-weight: bold;
+	color: #fdfdfd;
+	transform: translateY(-3px);
+	padding-left: 10px;
+
+}
+ /* menu controll */
+  header .container .banner{
+  	background: #fdfdfd;
+  	margin-top: 5px;
+  	padding-bottom: 20px;
+  }
+
+header .container .banner nav ol{ 
+	background: #fdfdfd;
+	border-radius: 0;
+	margin-bottom: 2px;
+}
+header .container .banner nav ol li,
+header .container .banner nav ol li a{  
+	font-size: 12px;
+}
+header .container .banner nav ol li{
+	color: #2a2a2a;
+}
+header .container .banner h3{
+	background: #7ABF00;
+	margin-left: 16px;
+	color: #fff;
+	font-size: 13px;
+	padding-left: 10px;
+	margin-bottom: 0;
+	line-height: 30px;
+	text-transform: uppercase;
+}
+header .container .banner .checkoutSteps{
+	width: 90%;
+	margin: auto;
+	margin-top: 20px;
+	border: 1px solid #ccc;
+}
+
+header .container .banner .checkoutSteps .checkout{
+	border-bottom: 1px solid #ccc;
+}
+header .container .banner .checkoutSteps .checkout h4{
+	font-size: 16px;
+	text-transform: uppercase;
+	height: 32px;
+	line-height: 27px;
+	background:  linear-gradient(to bottom, #FFFFFF 0%, #E3E3E3 100%);
+	color: #000;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	margin-bottom: 0;
+	border-bottom: 1px solid #ccc;
+	position: relative;
+}
+header .container .banner .checkoutSteps .checkout h4 span{
+	padding-left: 26px;
+	padding-right: 18px;
+	border-right: 1.5px solid #ccc;
+	margin-right: 20px;
+	width: 55px;
+	display: inline-block;
+}
+header .container .banner .checkoutSteps .checkout h4 span:nth-child(2){
+	position: absolute;
+	display: block;
+	left: 60px;
+	top: 50%;
+	transform: translateY(-50%);
+	border-right: 0;
+	width: 100%;
+	height: 100%;
+	padding-left: 0;
+}
+header .container .banner .checkoutSteps .active h4{
+	background: #fa7603;
+	color: #fff;
+}
+header .container .banner .checkoutSteps .active h4 span{
+	border-right: 1.5px solid #fff;
+}
+header .container .banner .checkoutSteps .before h4{
+	background: #669137;
+	color: #fff;
+	position: relative;
+}
+header .container .banner .checkoutSteps .before h4:after{
+	content: "edit \f0dd";
+	position: absolute;
+	right: 6px;
+	font-size: 10px;
+	font-family: 'Font Awesome 5 Free';
+	font-weight: 900;
+	font-style: italic;
+	word-spacing: 5px;
+	color: #000;
+	cursor: pointer;
+}
+
+header .container .banner .checkoutSteps .before h4 span{
+	border-right: 1.5px solid #fff !important;
+}
+header .container .banner .checkoutSteps .checkout .content{
+	padding-left: 26px;
+	padding-right: 26px;
+}
+header .container .banner .checkoutSteps .checkout .content .form{
+	display: flex;
+	flex-wrap: wrap;
+	padding-bottom: 10px;
+	justify-content: space-around;
+}
+header .container .banner .checkoutSteps .checkout .content  .item{
+	width: 50%;
+}
+header .container .banner .checkoutSteps .checkout:not(:first-child) .content  .item:first-child{
+	border-right: 1px solid #ccc;
+}
+header .container .banner .checkoutSteps .checkout .content h5{
+	font-size: 15px;
+	text-transform: uppercase;
+	color: #0a263c;
+	padding-bottom: 7px;
+	border-bottom: 1px solid #ccc;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+header .container .banner .checkoutSteps .checkout .content .item:nth-child(2){
+	padding-left: 26px;
+}
+header .container .banner .checkoutSteps .checkout:not(:first-child) .content h5{
+	border-bottom: none;	
+}
+header .container .banner .checkoutSteps .checkout .content form label{
+	display: block;
+	font-size: 12px;
+	font-weight: bold;
+	text-transform: capitalize;
+	height: 15px;
+	line-height: 15px;
+	color: #666;
+	width: 100%;
+	position: relative;
+}
+header .container .banner .checkoutSteps .checkout .content form label sup{
+	color: red;
+	font-size: 12px;
+	top: -2px;
+}
+header .container .banner .checkoutSteps .checkout .content form u{
+	font-size: 11px;
+	color: #373d42;
+}
+header .container .banner .checkoutSteps .checkout .content form label input[type="radio"]{
+	margin-right: 4px;
+	transform: translateY(2px);
+	width: 13px !important;
+}
+header .container .banner .checkoutSteps .checkout .content .item form p{
+	font-size: 11px;
+	margin-bottom: 10px;
+}
+header .container .banner .checkoutSteps .checkout .content .form .item:nth-child(2) form label{
+	margin-bottom: 48px;
+}
+header .container .banner .checkoutSteps .checkout .content form.shipping label,header .container .banner .checkoutSteps .checkout .content form.payment label,
+header .container .banner .checkoutSteps .checkout:first-child .content form.order label,header .container .banner .checkoutSteps .checkout .content form.payment label{
+	margin-bottom: 10px !important;
+}
+
+header .container .banner .checkoutSteps .checkout .content form label input[type="email"],
+header .container .banner .checkoutSteps .checkout .content form label input[type="password"],
+header .container .banner .checkoutSteps .checkout .content form label input[type="text"]{
+	display: block;
+	width: 80%;
+	height: 27px;
+	margin-top: 5px;
+}
+header .container .banner .checkoutSteps .checkout .bottom{
+	width: 100%;
+	height:70px;
+}
+header .container .banner .checkoutSteps .checkout .bottom p.right{
+	float: right;
+	margin-top: 10px;
+	color: red;
+	font-style: italic;
+	margin-right: 26px;
+	margin-bottom: 0;
+	margin-top: 0;
+	font-size: 12px;
+}
+header .container .banner .checkoutSteps .checkout .bottom button{
+	display: block;
+	border: none;
+	background: #ff7800;
+	text-transform: uppercase;
+	color: #fff;
+	margin-top: 10px;
+	margin-bottom: 40px;
+	float: right;
+	clear: right;
+	width: 98px;
+	height: 24px;
+	line-height: 22px;
+	font-weight: bold;
+	margin-right: 26px;
+	cursor: pointer;
+}
+header .container .banner .checkoutSteps .checkout .content .item form label{
+	margin-bottom: 42px;
+}
+header .container .banner .checkoutSteps .checkout .content  .item .image{
+	display: none;
+}
+header .container .banner .checkoutSteps .checkout .content  .item .image:nth-child(2){
+	display: block;
+}
+header .container .banner .checkoutSteps .checkout .content  .item .image img{
+	width: 100%;
+	height: 80px;
+	margin-bottom: 10px;
+}
+
+header .container .banner .checkoutSteps .checkout .row{
+	margin: 0;
+}
+header .container .banner .checkoutSteps .checkout .info .col{
+	padding: 12px 26px;
+	
+}
+header .container .banner .checkoutSteps .checkout .info ul{
+	padding: 0;
+	list-style: none;
+	margin: 0;
+}
+header .container .banner .checkoutSteps .checkout .info ul li{
+	font-size: 12px;
+	height: 14.8px;
+}
+header .container .banner .checkoutSteps .checkout .info ul li.strong{
+	font-weight: bold;
+}
+.report{
+	font-size: 10.5px;
+	color: red;
+	font-style: italic;
+	display: none;
+}
+/* End header */
+
+
+/* Begin brand logo */
+.brand_logo .container .row .col .cover{
+	width: 100%;
+	box-shadow: 0 1.5px 9px rgba(0, 0, 0, 0.6);
+	border-radius: 5px;
+	background: #fff;	
+	background-size: 100%;
+	position: relative;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	margin-top: 20px;
+}
+.brand_logo .container .row .col div.brand_logo{
+	width: 90%;
+	margin: auto;
+}
+.brand_logo .container .row .col div.brand_logo .slick-prev{
+	left: -6.5%;
+	width: 51px;
+	height: 45px;
+	background: url(../image/button-bg.png) no-repeat 0 0;
+}
+.brand_logo .container .row .col div.brand_logo .slick-next{
+	right: -6.5%;
+	width: 51px;
+	height: 45px;
+	background: url(../image/button-bg.png) no-repeat -51px 0px;
+}
+.brand_logo .container .row .col div.brand_logo .slick-prev:before,.brand_logo .container .row .col div.brand_logo .slick-next:before{
+	content: "";
+}
+.brand_logo .container .row .col div.brand_logo .item {
+	padding-bottom: 6px;
+}	
+.brand_logo .container .row .col div.brand_logo .item img{
+	width: 92px;
+	height: 90px;
+	background: url(../image/bg-brand.png);
+	background-repeat: no-repeat;
+	margin: auto;
+	margin-top: 5px;
+}
+/* End logo */
+
+/* Begin Footer */
+footer{
+	margin-bottom: 30px;
+}
+footer .container .row{
+	background: #fdfdfd;
+	box-shadow: 0 1.5px 9px rgba(0, 0, 0, 0.6);
+}
+footer .container .row .col-md-5{
+	padding-left: 30px;
+	padding-right: 40px;
+	padding-top: 30px;
+}
+footer .container .row .col-md-5  p{
+	margin-top: 20px;
+	color: #666;
+	font-size: 1.1rem;
+}
+footer .container .row:nth-child(1) .col-md{
+	border-left: 1px solid #ccc;
+	padding-left: 20px;
+	color: #8a8a8a;
+
+}
+footer .container .row:nth-child(1) .col-md h3{
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: 600;
+	color: #292733;
+	margin-top: 30px;
+	margin-bottom: 13px;
+}
+footer .container .row:nth-child(1) .col-md ul{
+	padding: 0;
+	list-style: none;
+}
+footer .container .row:nth-child(1) .col-md ul li{
+	margin-top: 10px;
+
+}
+footer .container .row:nth-child(1) .col-md ul li a{
+	text-decoration: none;
+	color: #8a8a8a;
+
+}
+footer .container .row:nth-child(1) .col-md ul li a i{
+	border: 1px solid #888;
+	color : #555;
+	font-size: 11px;
+	height: 24px;
+	width: 24px;
+	border-radius: 100%;
+	text-align: center;
+	line-height: 22px;
+	margin-right: 13px;
+	transition: 0.35s;
+}
+footer .container .row:nth-child(1) .col-md ul li i{
+}
+footer .container .row:nth-child(1) .col-md ul li:hover a i{
+	border: 1px solid transparent;
+	color: #fdfdfd;
+}
+footer .container .row:nth-child(1) .col-md ul li:hover a i.fa-facebook-f{
+	background:  #0033cc;
+}
+footer .container .row:nth-child(1) .col-md ul li:hover a i.fa-twitter{
+	background: #0099ff;
+}
+footer .container .row:nth-child(1) .col-md ul li:hover a i.fa-google-plus-g{
+	background: #ff3300;
+}
+footer .container .row:nth-child(1) .col-md ul li:hover a i.fa-pinterest-p{
+	background: red;
+}
+footer .container .row:nth-child(1) .col-md p{
+	cursor: pointer;
+}
+footer .container .row:nth-child(1) .col-md p:nth-child(2){
+	cursor: pointer;
+	margin-bottom: 28px;	
+}
+footer .container .row:nth-child(1) .col-md p i{
+	margin-right: 13px;
+	color: #8a8a8a !important;
+}
+footer .container .row:nth-child(1) .col-md p span{
+	display: block;
+	float: right;
+	width: 90%;
+}
+footer .container .row:nth-child(1) .col-md p:last-child{
+	color: #85d564;
+}
+footer .container .row:nth-child(2){
+	border-radius: 0 0 5px 5px;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: 12px;
+	font-weight: bold;
+}
+/* End footer */
+
+/* Responsive */
+@media only screen and (max-width: 1200px) {
+	header .container .menu-controll nav .collapse ul li {
+		padding-left: 12px;
+		padding-right: 12px;
+	}
+	header .container .menu-controll nav .collapse ul li:last-child{
+		width: 252px;
+	}
+	header .container .menu-controll nav .collapse ul li.down{
+		font-size: 11px;
+	}
+	header .container .menu-controll nav .collapse ul li a{
+			font-size: 11px;
+	}
+	header .container .menu-controll nav .collapse ul li:last-child{
+		min-width: 260px;
+	}	
+}
+
+
+@media only screen and (max-width: 992px) {
+	header .container .menu-controll nav .collapse ul li {
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+	header .container .menu-controll nav .collapse ul li:last-child{
+		width: 202px;
+	}
+	header .container .menu-controll nav .collapse ul li.down{
+		font-size: 0.6rem;
+	}
+	header .container .menu-controll nav .collapse ul li a{
+		font-size: 0.6rem;
+	}		
+	header .container .banner form label input,header .container .banner form label textarea{
+		width: 96%;
+ 	}
+ 	header .container .menu-controll nav .collapse ul li:last-child{
+		min-width: 230px;
+	}
+
+	header .container .banner .checkoutSteps .checkout .content form label input[type="email"],	
+	header .container .banner .checkoutSteps .checkout .content form label input[type="password"],	
+	header .container .banner .checkoutSteps .checkout .content form label input[type="text"]{
+		width: 90%;
+	}
+	
+}
+@media only screen and (max-width: 768px) {
+	header .container .menu-controll nav .collapse ul li{
+		padding-left: 20px;
+	}
+	header .container .menu-controll nav .collapse ul li:last-child{
+		width: 100%;
+	}	
+	header .container .menu-controll nav .collapse ul li.down{
+		font-size: 11px;
+	}
+	header .container .menu-controll nav .collapse ul li a{
+		font-size: 11px;
+	}	
+ 	header .container .banner .col-sm-4 .detail img:last-child{
+ 		display: none;
+	}
+	footer .container .row:nth-child(1) .col-md{
+		border-top: 1px solid #ccc;
+		border-left: none;
+	}
+	footer .container .row:nth-child(1) .col-md:last-child{
+		border-left: 1px solid #ccc;
+	}
+
+}
+@media only screen and (max-width: 576px) {
+	header .container .banner .checkoutSteps .checkout .content  .item{
+		width: 90%;
+		border-right: transparent !important;
+ 	}
+ 	header .container .banner .checkoutSteps .checkout .content  .item:last-child{
+ 		padding-left: 0;
+ 		border-top: 1px solid #ccc;
+ 		padding-top: 10px;
+ 		margin-top: 20px;
+ 	}
+ 	header .container .banner .checkoutSteps .checkout .content form label input{
+ 		width: 96% !important;
+ 	}
+}
+@media only screen and (max-width: 460px) {
+	header .container .banner .checkoutSteps .checkout h4 span{
+		margin-right: 5px;
+	}
+}
+@media only screen and (max-width: 460px) {
+	header .container .banner .checkoutSteps .checkout .info ul li.strong{
+		font-size: 10px;
+	}
+}
